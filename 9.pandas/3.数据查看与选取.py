@@ -28,5 +28,6 @@ print(s)
 # df.iloc[0,:]#返回第一行
 # df.iloc[0,0]#返回第一列的第一个元素
 print(df)
-
+df.loc[0,2] = None
+print(df.loc[0,2])
 
