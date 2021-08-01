@@ -7,10 +7,9 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 s = pd.Series(np.array(np.random.randn(10)))  # 只接受一维数组
 
-<<<<<<< HEAD
+
 df.loc[4, 4] = None
-=======
->>>>>>> abfc53112e2451200c1be30fdbc53d82e82c9171
+
 df.iat[3, 3] = None # 根据行列定位更改元素值;这里将该位置的元素值置空
 # df.columns = ['a','b','c']# 重命名列名
 # pd.isnull()# 检查DataFrame对象中的空值，并返回一个Boolean数组;参数是一个DataFrame对象
@@ -26,9 +25,9 @@ df.iat[3, 3] = None # 根据行列定位更改元素值;这里将该位置的元
 # df.set_index('column_one')# 更改索引列
 # df.rename(index=lambda x: x + 1)# 批量重命名索引
 print(df)
-<<<<<<< HEAD
+
 print(df.fillna('0'))
-=======
+
 print(pd.isnull(df))
 print(df.fillna(99))
->>>>>>> abfc53112e2451200c1be30fdbc53d82e82c9171
+

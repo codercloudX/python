@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # import numpy as np
 # import pandas as pd
 #
@@ -33,16 +33,6 @@
 # # print(df.loc[0,2])
 
 import numpy as np
-from matplotlib import pyplot as plt
-x = np.arange(3,20)
-y=3*x+11
-plt.title("Matplotlib demo")
-plt.xlabel("x axis caption")
-plt.ylabel("y axis caption")
-plt.plot(x,y,"o")
-plt.show()
-=======
-import numpy as np
 import pandas as pd
 
 df = pd.DataFrame(np.random.rand(5, 6))  # 5行6列的DataFrame对象
@@ -71,5 +61,4 @@ s = pd.Series(np.array(np.random.randn(10)))  # 只接受一维数组
 # df.iloc[0,0]#返回第一列的第一个元素
 
 print(s.iloc[0:])
->>>>>>> abfc53112e2451200c1be30fdbc53d82e82c9171
 
