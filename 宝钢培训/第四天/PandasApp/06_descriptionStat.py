@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 
-d = {'Name':pd.Series(['Tom','James','Ricky','Vin','Steve','Minsu','Jack',
-   'Lee','David','Gasper','Betina','Andres']),
-   'Age':pd.Series([25,26,25,23,30,29,23,34,40,30,51,46]),
-   'Rating':pd.Series([4.23,3.24,3.98,2.56,3.20,4.6,3.8,3.78,2.98,4.80,4.10,3.65])}
+d = {'Name': pd.Series(['Tom', 'James', 'Ricky', 'Vin', 'Steve', 'Minsu', 'Jack',
+                        'Lee', 'David', 'Gasper', 'Betina', 'Andres']),
+     'Age': pd.Series([25, 26, 25, 23, 30, 29, 23, 34, 40, 30, 51, 46]),
+     'Rating': pd.Series([4.23, 3.24, 3.98, 2.56, 3.20, 4.6, 3.8, 3.78, 2.98, 4.80, 4.10, 3.65])}
 df = pd.DataFrame(d)
 print(df)
 print('-----------------------------------------------------')
@@ -24,9 +24,9 @@ print('-----------------------------------------------------')
 11  Andres   46    3.65
 '''
 
-#sum()方法返回所请求轴的值的总和。默认情况下，轴为索引(axis=0)纵向
+# sum()方法返回所请求轴的值的总和。默认情况下，轴为索引(axis=0)纵向
 print('show sum():')
-print(df.sum()) #等价于df.sum(0)
+print(df.sum())  # 等价于df.sum(0)
 print('-----------------------------------------------------')
 '''
 show sum():
@@ -36,7 +36,7 @@ Rating                                                44.92
 dtype: object
 '''
 
-#除字符串列，数字列横向叠加
+# 除字符串列，数字列横向叠加
 print('show sum(1):')
 print(df.sum(1))
 print('-----------------------------------------------------')
@@ -58,7 +58,7 @@ show sum(1):
 dtype: float64
 '''
 
-#mean()返回平均值
+# mean()返回平均值
 print('show mean():')
 print(df.mean())
 print('-----------------------------------------------------')
@@ -68,7 +68,7 @@ Rating     3.743333
 dtype: float64
 '''
 
-#std()返回数字列的Bressel标准偏差
+# std()返回数字列的Bressel标准偏差
 '''
 标准偏差(Std Dev,Standard Deviation) -统计学名词。
 一种度量数据分布的分散程度之标准，用以衡量数据值偏离算术平均值的程度。
@@ -94,7 +94,7 @@ Rating    0.661628
 dtype: float64
 '''
 
-#describe()函数是用来计算有关DataFrame列的统计信息的摘要
+# describe()函数是用来计算有关DataFrame列的统计信息的摘要
 print(df.describe())
 print('-----------------------------------------------------')
 '''
@@ -109,17 +109,17 @@ min    23.000000   2.560000  (最小值)
 max    51.000000   4.800000  (最大值)
 '''
 
-#有3个Ricky信息
-d = {'Name':pd.Series(['Tom','James','Ricky','Ricky','Ricky','Minsu','Jack',
-   'Lee','David','Gasper','Betina','Andres']),
-   'Age':pd.Series([25,26,25,23,30,29,23,34,40,30,51,46]),
-   'Rating':pd.Series([4.23,3.24,3.98,2.56,3.20,4.6,3.8,3.78,2.98,4.80,4.10,3.65])}
+# 有3个Ricky信息
+d = {'Name': pd.Series(['Tom', 'James', 'Ricky', 'Ricky', 'Ricky', 'Minsu', 'Jack',
+                        'Lee', 'David', 'Gasper', 'Betina', 'Andres']),
+     'Age': pd.Series([25, 26, 25, 23, 30, 29, 23, 34, 40, 30, 51, 46]),
+     'Rating': pd.Series([4.23, 3.24, 3.98, 2.56, 3.20, 4.6, 3.8, 3.78, 2.98, 4.80, 4.10, 3.65])}
 df = pd.DataFrame(d)
 print(df)
 print('-----------------------------------------------------')
 
-#include用于传递列总结的必要信息的参数
-print(df.describe(include=['object'])) #显示freq最高的对象
+# include用于传递列总结的必要信息的参数
+print(df.describe(include=['object']))  # 显示freq最高的对象
 print('-----------------------------------------------------')
 '''
          Name
@@ -129,7 +129,7 @@ top     Ricky
 freq        3
 '''
 
-#统计信息的摘要追加freq最高的对象信息统计
+# 统计信息的摘要追加freq最高的对象信息统计
 print(df.describe(include='all'))
 print('-----------------------------------------------------')
 '''

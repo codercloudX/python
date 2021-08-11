@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import scipy
 
 df = pd.read_csv('pokemon.csv', encoding='gbk')
 data = df[['name', 'defense', 'height_m', 'weight_kg', 'speed', 'hp']].head(20)

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-N=20
+N = 20
 '''
 date_range函数的freq参数取值参考:
 B business day frequency 工作日频率
@@ -40,17 +40,17 @@ random.normal函数参数参考:
 参数size(int 或者整数元组)：输出的值赋在shape里，默认为None。
 '''
 df = pd.DataFrame({
-   'A': pd.date_range(start='2020-01-01',periods=N,freq='D'),
-   'x': np.linspace(0,stop=N-1,num=N),
-   'y': np.random.rand(N),
-   'C': np.random.choice(['Low','Medium','High'],N).tolist(),
-   'D': np.random.normal(100, 10, size=(N)).tolist()
+    'A': pd.date_range(start='2020-01-01', periods=N, freq='D'),
+    'x': np.linspace(0, stop=N - 1, num=N),
+    'y': np.random.rand(N),
+    'C': np.random.choice(['Low', 'Medium', 'High'], N).tolist(),
+    'D': np.random.normal(100, 10, size=(N)).tolist()
 })
 print(df)
 print('-----------------------------------------------------')
-#重建索引
-df_reindexed = df.reindex(index=[0,2,5], columns=['A', 'C', 'B'])
-print (df_reindexed)
+# 重建索引
+df_reindexed = df.reindex(index=[0, 2, 5], columns=['A', 'C', 'B'])
+print(df_reindexed)
 print('-----------------------------------------------------')
 '''
             A     x         y       C           D
@@ -81,16 +81,16 @@ print('-----------------------------------------------------')
 5 2016-01-06     Low NaN
 '''
 
-#reindex_like重建索引与其他对象对齐
-df1 = pd.DataFrame(np.random.randn(10,3),columns=['col1','col2','col3'])
-df2 = pd.DataFrame(np.random.randn(7,3),columns=['col1','col2','col3'])
+# reindex_like重建索引与其他对象对齐
+df1 = pd.DataFrame(np.random.randn(10, 3), columns=['col1', 'col2', 'col3'])
+df2 = pd.DataFrame(np.random.randn(7, 3), columns=['col1', 'col2', 'col3'])
 print('df1:')
 print(df1)
 print('********************************************')
 print('df2:')
 print(df2)
 print('********************************************')
-#df1 = df1.reindex_like(df2) # 必须确保df1和df2列明相同
+# df1 = df1.reindex_like(df2) # 必须确保df1和df2列明相同
 df1 = df1.reindex_like(df2)
 print('df1_reindex_like:')
 print(df1)
@@ -136,8 +136,8 @@ pad/ffill - 向前填充值(向下复制填充最近的非NaN数据)
 bfill/backfill - 向后填充值(向上复制填充最近的非NaN数据)
 nearest  - 从最近的索引值填充(NaN的数据由最近的非NaN数据复制填充)
 '''
-df1 = pd.DataFrame(np.random.randn(6,3),columns=['col1','col2','col3'])
-df2 = pd.DataFrame(np.random.randn(2,3),columns=['col1','col2','col3'])
+df1 = pd.DataFrame(np.random.randn(6, 3), columns=['col1', 'col2', 'col3'])
+df2 = pd.DataFrame(np.random.randn(2, 3), columns=['col1', 'col2', 'col3'])
 print('原df1:')
 print(df1)
 print('原df2:')
@@ -147,7 +147,7 @@ print('df2_reindex_like:')
 print(df2.reindex_like(df1))
 # Now Fill the NAN's with preceding Values
 print("向前填充值:")
-print(df2.reindex_like(df1,method='ffill'))
+print(df2.reindex_like(df1, method='ffill'))
 print('-----------------------------------------------------')
 '''
 原df1:
@@ -180,12 +180,12 @@ df2_reindex_like:
 5  0.762296  0.629481 -0.257523
 '''
 
-#设置填充限制
-df1 = pd.DataFrame(np.random.randn(6,3),columns=['col1','col2','col3'])
-df2 = pd.DataFrame(np.random.randn(2,3),columns=['col1','col2','col3'])
+# 设置填充限制
+df1 = pd.DataFrame(np.random.randn(6, 3), columns=['col1', 'col2', 'col3'])
+df2 = pd.DataFrame(np.random.randn(2, 3), columns=['col1', 'col2', 'col3'])
 print(df2.reindex_like(df1))
 print("向前填充值1行数据:")
-print(df2.reindex_like(df1,method='ffill',limit=1))
+print(df2.reindex_like(df1, method='ffill', limit=1))
 print('-----------------------------------------------------')
 '''
        col1      col2      col3
@@ -205,11 +205,11 @@ print('-----------------------------------------------------')
 5       NaN       NaN       NaN
 '''
 
-#重命名,rename()方法允许基于一些映射(字典或者系列)或任意函数来重新标记一个轴
-df1 = pd.DataFrame(np.random.randn(6,3),columns=['col1','col2','col3'])
+# 重命名,rename()方法允许基于一些映射(字典或者系列)或任意函数来重新标记一个轴
+df1 = pd.DataFrame(np.random.randn(6, 3), columns=['col1', 'col2', 'col3'])
 print(df1)
-print ("重命名行列:")
-print(df1.rename(columns={'col1':'c1','col2':'c2'},index ={0 :'apple',1 :'banana',2 :'durian'}))
+print("重命名行列:")
+print(df1.rename(columns={'col1': 'c1', 'col2': 'c2'}, index={0: 'apple', 1: 'banana', 2: 'durian'}))
 '''
        col1      col2      col3
 0 -1.825568  0.033222  1.078255

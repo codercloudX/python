@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df=pd.read_csv("temp.csv")
+df = pd.read_csv("temp.csv")
 print(df)
 print('-----------------------------------------------------')
 '''
@@ -12,8 +12,8 @@ print('-----------------------------------------------------')
 3     4     Ram   38  Hyderabad    3900
 '''
 
-#自定义索引
-df=pd.read_csv("temp.csv",index_col=['S.No'])
+# 自定义索引
+df = pd.read_csv("temp.csv", index_col=['S.No'])
 print(df)
 print('-----------------------------------------------------')
 '''
@@ -25,8 +25,8 @@ S.No
 4        Ram   38  Hyderabad    3900
 '''
 
-#dtype列作为字典传递
-df = pd.read_csv("temp.csv",dtype={'Salary':np.float64}) #将Salary原来int64类型改成float64
+# dtype列作为字典传递
+df = pd.read_csv("temp.csv", dtype={'Salary': np.float64})  # 将Salary原来int64类型改成float64
 print(df.dtypes)
 print('-----------------------------------------------------')
 '''
@@ -38,8 +38,8 @@ Salary    float64
 dtype: object
 '''
 
-#使用names参数指定标题的名称
-df=pd.read_csv("temp.csv",names=['a','b','c','d','e'])
+# 使用names参数指定标题的名称
+df = pd.read_csv("temp.csv", names=['a', 'b', 'c', 'd', 'e'])
 print(df)
 print('-----------------------------------------------------')
 '''
@@ -52,8 +52,8 @@ print('-----------------------------------------------------')
 4     4     Ram   38  Hyderabad    3900
 '''
 
-#如果标题不是第一行，则将行号传递给标题。这将跳过前面的行
-df=pd.read_csv("temp.csv",names=['a','b','c','d','e'],header=0)
+# 如果标题不是第一行，则将行号传递给标题。这将跳过前面的行
+df = pd.read_csv("temp.csv", names=['a', 'b', 'c', 'd', 'e'], header=0)
 print(df)
 print('-----------------------------------------------------')
 '''
@@ -64,8 +64,8 @@ print('-----------------------------------------------------')
 3  4     Ram  38  Hyderabad   3900
 '''
 
-#skiprows跳到指定行数开始显示
-df=pd.read_csv("temp.csv", skiprows=2)
+# skiprows跳到指定行数开始显示
+df = pd.read_csv("temp.csv", skiprows=2)
 print(df)
 '''
    2     Lee  32   HongKong  3000

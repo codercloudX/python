@@ -1,0 +1,3 @@
+A:06_descriptionStat.py举一反三，用你们自己的数据测算
+B:07_func.py 举一反三，用你们自己的数据测算
+C:08_RebuildIndex.py 用你们自己的数据测算

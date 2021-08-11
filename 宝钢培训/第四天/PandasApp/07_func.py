@@ -1,16 +1,18 @@
 import pandas as pd
 import numpy as np
 
+
 # 管道
 # 方法1声明操作函数
-def adder(ele1,ele2):
-    return ele1+ele2
+def adder(ele1, ele2):
+    return ele1 + ele2
 
-myArray=np.random.randn(5,3)
+
+myArray = np.random.randn(5, 3)
 print('原数组:')
 print(myArray)
 print('-----------------------------------------------------')
-df = pd.DataFrame(myArray,columns=['col1','col2','col3'])
+df = pd.DataFrame(myArray, columns=['col1', 'col2', 'col3'])
 print(df)
 '''
 旧版本做法
@@ -18,8 +20,8 @@ def adder(ele1,ele2):
     return ele1+ele2
 df.pipe(adder,20)
 '''
-df=df.pipe(adder,20) # 方法1通过pipe调用操作函数，并设置叠加值
-#df+=20 # 方法2直接将df叠加值即可，pandas最新管道用法
+df = df.pipe(adder, 20)  # 方法1通过pipe调用操作函数，并设置叠加值
+# df+=20 # 方法2直接将df叠加值即可，pandas最新管道用法
 print('管道将DataFrame的所有元素叠加20:')
 print(df)
 print('-----------------------------------------------------')
@@ -44,8 +46,8 @@ print('-----------------------------------------------------')
 print('原数组:')
 print(myArray)
 print('-----------------------------------------------------')
-df = pd.DataFrame(myArray,columns=['col1','col2','col3'])
-df = df.apply(np.mean) # 列求均值
+df = pd.DataFrame(myArray, columns=['col1', 'col2', 'col3'])
+df = df.apply(np.mean)  # 列求均值
 print('DataFrame列均值:')
 print(df)
 print('-----------------------------------------------------')
@@ -64,8 +66,8 @@ col3   -0.975824
 dtype: float64
 '''
 
-df = pd.DataFrame(myArray,columns=['col1','col2','col3'])
-df=df.apply(np.mean,axis=1) # 行求均值
+df = pd.DataFrame(myArray, columns=['col1', 'col2', 'col3'])
+df = df.apply(np.mean, axis=1)  # 行求均值
 print('DataFrame行均值:')
 print(df)
 print('-----------------------------------------------------')
@@ -80,8 +82,8 @@ dtype: float64
 '''
 
 # 通过lambda嵌入函数算法求解
-df = pd.DataFrame(myArray,columns=['col1','col2','col3'])
-df = df.apply(lambda x:x.max()-x.min()) # 列最大值减最小值
+df = pd.DataFrame(myArray, columns=['col1', 'col2', 'col3'])
+df = df.apply(lambda x: x.max() - x.min())  # 列最大值减最小值
 print('DataFrame列最大值减最小值:')
 print(df)
 print('-----------------------------------------------------')
@@ -93,8 +95,8 @@ col3    1.119673
 dtype: float64
 '''
 
-df = pd.DataFrame(myArray,columns=['col1','col2','col3'])
-df = df.apply(lambda x:x.max()-x.min(),axis=1) # 行最大值减最小值
+df = pd.DataFrame(myArray, columns=['col1', 'col2', 'col3'])
+df = df.apply(lambda x: x.max() - x.min(), axis=1)  # 行最大值减最小值
 print('DataFrame行最大值减最小值:')
 print(df)
 print('-----------------------------------------------------')
@@ -108,11 +110,11 @@ DataFrame行最大值减最小值:
 dtype: float64
 '''
 
-#通过map函数仅对指定列运算
-myArray=np.random.randn(5,3)
+# 通过map函数仅对指定列运算
+myArray = np.random.randn(5, 3)
 print(myArray)
-df = pd.DataFrame(myArray,columns=['col1','col2','col3'])
-df=df['col1'].map(lambda x:x*100)
+df = pd.DataFrame(myArray, columns=['col1', 'col2', 'col3'])
+df = df['col1'].map(lambda x: x * 100)
 print(df)
 print('-----------------------------------------------------')
 '''
@@ -129,9 +131,9 @@ print('-----------------------------------------------------')
 Name: col1, dtype: float64
 '''
 
-#通过applymap函数对DataFrame所有可计算数据运算
-df = pd.DataFrame(myArray,columns=['col1','col2','col3'])
-df=df.applymap(lambda x:x*100) # 等同于用管道 df*=100
+# 通过applymap函数对DataFrame所有可计算数据运算
+df = pd.DataFrame(myArray, columns=['col1', 'col2', 'col3'])
+df = df.applymap(lambda x: x * 100)  # 等同于用管道 df*=100
 print(df)
 '''
          col1        col2       col3

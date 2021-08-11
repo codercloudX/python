@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d36faf9a-b856-4a83-9276-e1c9e1ae44ff" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/0801Homeword.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/01_ObjectOperation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/02_Series.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/03_DataFrame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/04_xarray_DataArray.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/05_xarray_Dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/06_descriptionStat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/07_func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/08_RebuildIndex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/09_iter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/10_sort.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/11_text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/12_option.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/13_index&amp;chooseData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/14_stat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/15_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/16_aggregate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/17_missData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/18_groupby.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/19_merge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/20_concat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/21_date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/22_timedelta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/23_Categories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/24_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/25_io.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/26_sparse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/Python—Pandas类库使用.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/pandas设置不隐藏省略列.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/PandasApp/temp.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../宝钢培训/第四天/pokemon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11.demo/pokemon.py" beforeDir="false" afterPath="$PROJECT_DIR$/../11.demo/pokemon.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1wNg5M5rHorFPOAkFYAWRtQq9AH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="12.SciPy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d36faf9a-b856-4a83-9276-e1c9e1ae44ff" name="默认变更列表" comment="" />
+      <created>1628304276268</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628304276268</updated>
+    </task>
+    <servers />
   </component>
 </project>
