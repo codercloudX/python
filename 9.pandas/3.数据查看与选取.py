@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 # import numpy as np
 # import pandas as pd
@@ -32,6 +34,7 @@
 # # df.loc[0,2] = None
 # # print(df.loc[0,2])
 
+>>>>>>> 06a1561fc77d4e4dcd8b0e28f38e74cec8517929
 import numpy as np
 import pandas as pd
 

@@ -14,8 +14,12 @@ pd.set_option('display.max_rows', None)
 # pd.read_html(url)：#解析URL、字符串或者HTML文件，抽取其中的tables表格
 # pd.read_clipboard()：#从你的粘贴板获取内容，并传给read_table()
 # pd.DataFrame(dict)：#从字典对象导入数据，Key是列名，Value是数据
+<<<<<<< HEAD
+print(df)
+=======
 
 print(type(df))
 
 print(df)
 
+>>>>>>> 06a1561fc77d4e4dcd8b0e28f38e74cec8517929
