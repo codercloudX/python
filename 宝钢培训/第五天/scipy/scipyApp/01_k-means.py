@@ -1,9 +1,9 @@
-from numpy import vstack,array
+from numpy import vstack, array
 from numpy.random import rand
-from scipy.cluster.vq import kmeans,vq,whiten
+from scipy.cluster.vq import kmeans, vq, whiten
 
 # 生成200组随机值数组，前100组每个值加0.5
-data = vstack((rand(100,3) + array([.5,.5,.5]),rand(100,3)))
+data = vstack((rand(100, 3) + array([.5, .5, .5]), rand(100, 3)))
 
 '''
 1.白化数据
@@ -16,15 +16,15 @@ data = whiten(data)
 2.计算具有三个聚类的K-Means(质心根据需求设置)
 执行K-Means一组观察向量形成K簇. K-Means算法调整质心，直到不能进行足够的进展，即失真的变化，因为最后一次迭代小于某个阈值.
 '''
-centroids,k = kmeans(data,3)
+centroids, k = kmeans(data, 3)
 print(centroids)
 '''
 3.将每个样本分配给一个簇
 vq 函数将'M'中的每个观察向量与'N' obs 数组中的质心进行比较将观察分配给最近的群集.它返回每个观察的簇和失真
 '''
-clx,k = vq(data,centroids)
+clx, k = vq(data, centroids)
 print(clx)
-#print(k) #对应索引样本与聚类中心的距离
+# print(k) #对应索引样本与聚类中心的距离
 '''
 012代表不同的簇
 [2 2 1 2 1 2 1 1 2 1 2 1 1 2 2 2 2 0 1 1 2 2 1 2 1 2 2 2 0 2 1 2 1 1 1 1 1

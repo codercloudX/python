@@ -17,7 +17,7 @@ df2 = pd.DataFrame({'A': 1.,
 print(df)
 # print(df.index)
 
-3
+
 # print(df.columns)
 # print(df.values)
 # print(df.describe(()))
@@ -43,3 +43,8 @@ print(df)
 # at 函数：通过行名和列名来取值（取行名为a, 列名为A的值）
 # iat 函数：通过行号和列号来取值（取第1行，第1列的值）
 
+# print(df[df.B > 0])  # A列大于0的值
+# print(df[df > 0])  # 获取所有大于0的值，小于0设为NaN
+df['E'] = ['one', 'one', 'two', 'three', 'four', 'three', 'two']
+print(df)
+print(df[df['E'].isin(['three'])])  # 筛选E列只有three的行

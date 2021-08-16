@@ -8,7 +8,6 @@ pd.set_option("display.max_column", None)
 pd.set_option("display.max_row", None)
 pd.set_option("display.width", 500)  # 指定显示最大宽度
 
-
 # data = df.at[8, 'abilities']# 第8行，列名为abilities的数据
 # data = df.loc[df['abilities'] == "['Overgrow', 'Chlorophyll']"]  # 筛选出，abilities值为['Overgrow', 'Chlorophyll']的数据（DataFrame对象）
 # data['speed'].mean()  #  求某一列的均值
@@ -18,4 +17,7 @@ pd.set_option("display.width", 500)  # 指定显示最大宽度
 # data = df.loc[df['type1'] == "grass"]
 # data = data[['name', 'speed']]
 data = df[['name', 'defense', 'height_m', 'weight_kg', 'speed', 'hp']].head(20)
+
+
+data = pd.DataFrame(data,index=data.name.tolist())
 print(data)

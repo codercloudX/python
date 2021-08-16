@@ -1,10 +1,12 @@
 import pandas as pd
 import numpy as np
 
-ipl_data ={'Team':['Riders','Riders','Devils','Devils','Kings','kings','Kings','Kings','Riders','Royals','Royals','Riders'],
-         'Rank':[1,2,2,3,3,4,1,1,2,4,1,2],
-         'Year':[2014,2015,2014,2015,2014,2015,2016,2017,2016,2014,2015,2017],
-         'Points':[876,789,863,673,741,812,756,788,694,701,804,690]}
+ipl_data = {
+    'Team': ['Riders', 'Riders', 'Devils', 'Devils', 'Kings', 'kings', 'Kings', 'Kings', 'Riders', 'Royals', 'Royals',
+             'Riders'],
+    'Rank': [1, 2, 2, 3, 3, 4, 1, 1, 2, 4, 1, 2],
+    'Year': [2014, 2015, 2014, 2015, 2014, 2015, 2016, 2017, 2016, 2014, 2015, 2017],
+    'Points': [876, 789, 863, 673, 741, 812, 756, 788, 694, 701, 804, 690]}
 df = pd.DataFrame(ipl_data)
 print(df)
 print('-----------------------------------------------------')
@@ -36,7 +38,7 @@ print('-----------------------------------------------------')
 <pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000029DA5439580>
 '''
 
-#查看分组
+# 查看分组
 print(df.groupby('Team').groups)
 print('-----------------------------------------------------')
 '''
@@ -47,8 +49,8 @@ print('-----------------------------------------------------')
 'kings': Int64Index([5], dtype='int64')}
 '''
 
-#按多列分组
-print(df.groupby(['Team','Year']).groups)
+# 按多列分组
+print(df.groupby(['Team', 'Year']).groups)
 print('-----------------------------------------------------')
 '''
 {('Devils', 2014): Int64Index([2], dtype='int64'), 
@@ -65,9 +67,9 @@ print('-----------------------------------------------------')
 ('kings', 2015): Int64Index([5], dtype='int64')}
 '''
 
-#迭代遍历分组使用groupby对象，可以遍历类似itertools.obj的对象
+# 迭代遍历分组使用groupby对象，可以遍历类似itertools.obj的对象
 grouped = df.groupby('Year')
-for name,group in grouped:
+for name, group in grouped:
     print(name)
     print(group)
 print('-----------------------------------------------------')
@@ -94,7 +96,7 @@ print('-----------------------------------------------------')
 11  Riders     2  2017     690
 '''
 
-#使用get_group()方法，可以选择一个组
+# 使用get_group()方法，可以选择一个组
 grouped = df.groupby('Year')
 print(grouped.get_group(2014))
 print('-----------------------------------------------------')
@@ -106,7 +108,7 @@ print('-----------------------------------------------------')
 9  Royals     4  2014     701
 '''
 
-#聚合函数为每个组返回单个聚合值。当创建了分组(group by)对象，就可以对分组数据执行多个聚合操作。一个比较常用的是通过聚合或等效的agg方法聚合
+# 聚合函数为每个组返回单个聚合值。当创建了分组(group by)对象，就可以对分组数据执行多个聚合操作。一个比较常用的是通过聚合或等效的agg方法聚合
 grouped = df.groupby('Year')
 print(grouped['Points'].agg(np.mean))
 print('-----------------------------------------------------')
@@ -119,7 +121,7 @@ Year
 Name: Points, dtype: float64
 '''
 
-#size()函数查看每个分组的大小的方法
+# size()函数查看每个分组的大小的方法
 grouped = df.groupby('Team')
 print(grouped.agg(np.size))
 print('-----------------------------------------------------')
@@ -133,9 +135,9 @@ Royals     2     2       2
 kings      1     1       1
 '''
 
-#一次应用多个聚合函数
+# 一次应用多个聚合函数
 grouped = df.groupby('Team')
-agg = grouped['Points'].agg([np.sum,np.mean,np.std])
+agg = grouped['Points'].agg([np.sum, np.mean, np.std])
 print(agg)
 print('-----------------------------------------------------')
 '''
@@ -148,11 +150,11 @@ Royals  1505  752.500000   72.831998
 kings    812  812.000000         NaN
 '''
 
-#分组或列上的转换返回索引大小与被分组的索引相同的对象。因此转换应该返回与组块大小相同的结果
+# 分组或列上的转换返回索引大小与被分组的索引相同的对象。因此转换应该返回与组块大小相同的结果
 grouped = df.groupby('Team')
 print(grouped.groups)
 print('-----------------------------------------------------')
-score = lambda x:(x-x.mean())/x.std()*10
+score = lambda x: (x - x.mean()) / x.std() * 10
 print(grouped.transform(score))
 print('-----------------------------------------------------')
 '''
@@ -177,11 +179,11 @@ print('-----------------------------------------------------')
 11   5.000000  11.618950  -8.157595
 '''
 
-#过滤根据定义的标准过滤数据并返回数据的子集。filter()函数用于过滤数据
+# 过滤根据定义的标准过滤数据并返回数据的子集。filter()函数用于过滤数据
 grouped = df.groupby('Team')
 print(grouped.groups)
 print('-----------------------------------------------------')
-filter = df.groupby('Team').filter(lambda x:len(x)>=3) #返回三次以上参加的队伍
+filter = df.groupby('Team').filter(lambda x: len(x) >= 3)  # 返回三次以上参加的队伍
 print(filter)
 print('-----------------------------------------------------')
 '''
