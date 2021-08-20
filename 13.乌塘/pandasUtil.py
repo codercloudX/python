@@ -19,8 +19,10 @@ def getDataByName(name):
 def getDic(excelName, sheetName):
     #  1.选出总表有效数据
     df = pd.read_excel(excelName, sheet_name=sheetName)
-    df.columns = list(df.iloc[2])
-    data = df.iloc[5:348]
+    df.columns = list(df.loc[2])
+    print(df.columns)
+    data = df.loc[5:348]
+    print(type)
 
     #  2.遍历df.groupby()，得到行政村列表nameList并输出
     for key in data.groupby(by=["行政村"]):
